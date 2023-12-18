@@ -11,6 +11,6 @@
   </button >
   <hr class="border-2 border-neutral-700" >
   <p class="m-10 text-md text-center text-neutral-900 animate-pulse font-light text-2xl" >
-    Développez en VueJS par Valentin Fiess ❤️
+    Développé en VueJS par Valentin Fiess ❤️
   </p >
 </template >
