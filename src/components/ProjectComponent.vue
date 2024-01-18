@@ -32,9 +32,9 @@ defineProps({
 </script >
 
 <template >
-  <div class="mx-auto max-w-md overflow-hidden rounded-xl bg-transparent shadow-lg my-20 p-10" >
+  <div class="mx-auto max-w-md overflow-hidden rounded-xl bg-transparent shadow-lg my-20 p-8" >
     <img
-        :alt=alt class="ext-center mx-auto mb-10 rounded-xl w-60 h-60"
+        :alt=alt class="ext-center mx-auto mb-10 rounded-xl w-52 h-52"
         :src=image >
     <div class="p-4 text-center" >
       <p class="text-primary-500 mb-1 text-sm font-light" >{{ team }} •

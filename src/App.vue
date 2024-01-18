@@ -1,11 +1,13 @@
-<script setup>
-import { RouterView } from 'vue-router'
+<script setup >
+import {RouterView} from 'vue-router'
 import Navbar from './components/include/Navbar.vue'
 import Footer from './components/include/Footer.vue'
-</script>
+</script >
 
-<template>
+<template >
+  <div class="bg-[#FBFDFF]" >
     <Navbar />
     <router-view />
     <Footer />
-</template>
+  </div >
+</template >
