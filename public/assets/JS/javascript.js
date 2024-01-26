@@ -1,21 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Masque le bouton au chargement de la page
-  document.getElementById("back-to-top-btn").style.display = "none";
+  // Obtenez l'élément avec l'ID "back-to-top-btn"
+  const btn = document.getElementById("back-to-top-btn");
 
-  window.addEventListener("scroll", function () {
-      let t = document.getElementById("back-to-top-btn");
+  // Vérifiez si l'élément existe
+  if (btn) {
+    // Masque le bouton au chargement de la page
+    btn.style.display = "none";
+
+    window.addEventListener("scroll", function () {
       if (300 < window.pageYOffset) {
-          t.style.display = "block";
+          btn.style.display = "block";
       } else {
-          t.style.display = "none";
+          btn.style.display = "none";
       }
-  });
-  // Ajoute un événement au clic sur le bouton pour remonter en haut de la page
-  document
-      .getElementById("back-to-top-btn")
-      .addEventListener("click", function () {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-      });
+    });
+
+    // Ajoute un événement au clic sur le bouton pour remonter en haut de la page
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
   // Sélectionnez tous les liens d'ancre
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
 

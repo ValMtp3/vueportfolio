@@ -15,7 +15,8 @@ const languages = [
   {alt: "Logo JavaScript", image: "/assets/assets_index/JavaScript.webp", title: "JavaScript"},
   {alt: "Logo VueJS", image: "/assets/assets_index/VueJS.webp", title: "VueJS"},
   {alt: "Logo MySQL", image: "/assets/assets_index/MySQL-removebg.webp", title: "MySQL"},
-  {alt: "Logo Webflow", image: "/assets/assets_index/Webflow.webp", title: "WebFlow CMS"}
+  {alt: "Logo Webflow", image: "/assets/assets_index/Webflow.webp", title: "WebFlow CMS"},
+  {alt: "Logo Wordpress", image: "/assets/assets_index/wordpress.webp", title: "Wordpress"}
 ];
 
 const projects = [
