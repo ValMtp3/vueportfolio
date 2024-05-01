@@ -6,6 +6,8 @@ import MenuComponent from "@/components/MenuComponent.vue";
 import LanguageComponent from "@/components/LanguageComponent.vue";
 import FormationComponent from "@/components/FormationComponent.vue";
 import ProjectComponent from "@/components/ProjectComponent.vue";
+import TechnoWatchComponent from "@/components/TechnoWatchComponent.vue";
+import EpreuveComponent from "@/components/EpreuveComponent.vue";
 
 const languages = [
   {alt: "Logo html", image: "/assets/assets_index/HTML-removebg.webp", title: "HTML"},
@@ -74,40 +76,57 @@ const projects = [
     src: "https://github.com/ValMtp3/Damso",
     name: "Damso",
   },
-
+];
+const techwatch = [
+  {
+    alt: "Illustration Intelligence Artificielle",
+    image: "/assets/assets_index/IA.jpg",
+    description: "Veille technologique sur l'Intelligence Artificielle générative",
+    src: "/assets/assets_index/Veille techno IA générative.pdf",
+    name: "Intelligence Artificielle"
+  },
+  {
+    alt: "Illustration Blockchain",
+    image: "/assets/assets_index/blockchain.jpg",
+    description: "Veille technologique sur la Blockchain",
+    src: "/assets/assets_index/Veille techno Blockchain.pdf",
+    name: "Blockchain"
+  },
+];
+const EpreuveE5 = [
+  {
+    alt: "Logo HarmoniSound",
+    image: "/assets/assets_index/HarmoniSound.webp",
+    description: "Situation application web 1/2 : bibliothèque de gestion musicale en PHP Symfony",
+    src: "",
+    name: "HarmoniSound"
+  },
+  {
+    alt: "Illustration Blockchain",
+    image: "/assets/assets_index/InvestManagment.png",
+    description: "Situation application lourde 2/2 : gestion d'investissement financiers en Python",
+    src: "",
+    name: "InvestManagment"
+  },
 ];
 
 let showLanguages = ref(languages.slice(0, 6));
-let isShowLanguage = false;
-
 let showProjects = ref(projects.slice(0, 4));
-let isShowProject = false;
+let showTechwatch = ref(techwatch.slice(0, 4));
 
 const toggleDisplay = (type) => {
   switch (type) {
     case 'language':
-      if (isShowLanguage) {
-        showLanguages.value = languages.slice(0, 6);
-        isShowLanguage = false;
-      } else {
-        showLanguages.value = languages;
-        isShowLanguage = true;
-      }
+      showLanguages.value.length === languages.length ? showLanguages.value = languages.slice(0, 6) : showLanguages.value = languages;
       break;
     case 'project':
-      if (isShowProject) {
-        showProjects.value = projects.slice(0, 4);
-        isShowProject = false;
-      } else {
-        showProjects.value = projects;
-        isShowProject = true;
-      }
+      showProjects.value.length === projects.length ? showProjects.value = projects.slice(0, 4) : showProjects.value = projects;
+      break;
+    case 'techwatch':
+      showTechwatch.value.length === techwatch.length ? showTechwatch.value = techwatch.slice(0, 4) : showTechwatch.value = techwatch;
       break;
   }
-
-
 }
-
 </script >
 
 <template >
@@ -136,5 +155,27 @@ const toggleDisplay = (type) => {
     <button class="border border-current p-2 mb-4 rounded-lg bg-gray-500 text-white hover:bg-gray-400"
             @click="toggleDisplay('project')" >Afficher plus
     </button >
+  </div >
+  <p id="EpreuveE5" class="ml-10 text-5xl font-medium mt-40 text-neutral-950" ><i class="fa-solid fa-code" ></i >Epreuve
+                                                                                                                 E5
+  </p >
+  <div class="grid grid-rows-1 md:grid-cols-2 font-['Roboto']" >
+    <EpreuveComponent v-for="E5 in EpreuveE5" :key="E5.name" v-bind="E5" />
+  </div >
+  <div class=" justify-center grid" >
+    <p class="text-2xl font-medium text-neutral-950 mb-2" >
+      Tableau de syntheses E4
+    </p >
+    <div class="border border-current p-2 rounded-lg" >
+      <a href="/assets/assets_index/Epreuve E4.pdf" target="_blank" >
+        <img alt="tableau de sythese" class="w-60 h-60" src="/assets/assets_index/Epreuve E4.webp" >
+      </a >
+    </div >
+  </div >
+  <p id="VeilleTechno" class="ml-10 text-5xl font-medium mt-40 text-neutral-950" ><i class="fa-solid fa-code" ></i >Veille
+                                                                                                                    Technologique
+  </p >
+  <div class="grid grid-rows-1 md:grid-cols-2 font-['Roboto']" >
+    <TechnoWatchComponent v-for="tech in techwatch" :key="tech.name" v-bind="tech" />
   </div >
 </template >
