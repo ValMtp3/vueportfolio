@@ -12,7 +12,7 @@ const menuItems = ref([
 
 <template>
   <ul class="space-y-2">
-    <li v-for="item in menuItems" :key="item.text" class="text-xl transition-all duration-200 hover:text-3xl hover:font-semibold">
+    <li v-for="item in menuItems" :key="item.text" class="text-xl transition-all duration-100 hover:text-3xl hover:font-semibold">
       <a :href="item.href" class="block py-2 sm:py-5">— {{ item.text }}</a>
     </li>
   </ul>

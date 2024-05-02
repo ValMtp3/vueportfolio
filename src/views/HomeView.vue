@@ -162,13 +162,13 @@ const toggleDisplay = (type) => {
   <div class="grid grid-rows-1 md:grid-cols-2 font-['Roboto']" >
     <EpreuveComponent v-for="E5 in EpreuveE5" :key="E5.name" v-bind="E5" />
   </div >
-  <div class=" justify-center grid" >
-    <p class="text-2xl font-medium text-neutral-950 mb-2" >
+  <div class=" justify-center grid " >
+    <p class="text-2xl font-medium text-neutral-950 mb-4 justify-center text-center" >
       Tableau de syntheses E4
     </p >
     <div class="border border-current p-2 rounded-lg" >
       <a href="/assets/assets_index/Epreuve E4.pdf" target="_blank" >
-        <img alt="tableau de sythese" class="w-60 h-60" src="/assets/assets_index/Epreuve E4.webp" >
+        <img alt="tableau de sythese" class="w-96 " src="/assets/assets_index/Epreuve E4.webp" >
       </a >
     </div >
   </div >
