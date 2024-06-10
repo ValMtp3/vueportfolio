@@ -6,6 +6,7 @@ const menuItems = ref([
   { href: "#formation", text: "Formation" },
   { href: "#Projet", text: "Projets" },
   { href: "#EpreuveE5", text: "Epreuve E5" },
+  { href: "#EpreuveE4", text: "Epreuve E4" },
   { href: "#VeilleTechno", text: "Veille Technologique" },
 ]);
 </script>

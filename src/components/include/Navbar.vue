@@ -7,14 +7,14 @@
 
     <div >
       <div >
-        <a class="sticky top-0 z-50">
-          <router-link to="/">
-          <h1
-              class="text-neutral-950 mt-10 mr-10 font-light whitespace-nowrap text-lg md:text-5xl border-y-4 border-r-4 py-3 pr-8
+        <a class="sticky top-0 z-50" >
+          <router-link to="/" >
+            <h1
+                class="text-neutral-950 mt-10 mr-10 font-light whitespace-nowrap text-lg md:text-5xl border-y-4 border-r-4 py-3 pr-8
               md:pl-32 sm:pl-24 pl-10 rounded-r-xl border-current bg-sky-600 bg-opacity-80 backdrop-blur-sm h-20 flex items-center" >
-            Valentin Fiess
-          </h1 >
-          </router-link>
+              Valentin Fiess
+            </h1 >
+          </router-link >
         </a >
       </div >
 

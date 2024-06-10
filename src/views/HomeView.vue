@@ -8,6 +8,7 @@ import FormationComponent from "@/components/FormationComponent.vue";
 import ProjectComponent from "@/components/ProjectComponent.vue";
 import TechnoWatchComponent from "@/components/TechnoWatchComponent.vue";
 import EpreuveComponent from "@/components/EpreuveComponent.vue";
+import E4 from '@/components/E4.vue';
 
 const languages = [
   {alt: "Logo html", image: "/assets/assets_index/HTML-removebg.webp", title: "HTML"},
@@ -98,14 +99,14 @@ const EpreuveE5 = [
     alt: "Logo HarmoniSound",
     image: "/assets/assets_index/HarmoniSound.webp",
     description: "Situation application web 1/2 : bibliothèque de gestion musicale en PHP Symfony",
-    src: "",
+    src: "https://www.valentin-fiess.fr/project_music/public/index.php/",
     name: "HarmoniSound"
   },
   {
     alt: "Illustration Blockchain",
     image: "/assets/assets_index/InvestManagment.png",
     description: "Situation application lourde 2/2 : gestion d'investissement financiers en Python",
-    src: "",
+    src: "https://github.com/ValMtp3/InvestManagment/",
     name: "InvestManagment"
   },
 ];
@@ -162,15 +163,11 @@ const toggleDisplay = (type) => {
   <div class="grid grid-rows-1 md:grid-cols-2 font-['Roboto']" >
     <EpreuveComponent v-for="E5 in EpreuveE5" :key="E5.name" v-bind="E5" />
   </div >
-  <div class=" justify-center grid " >
-    <p class="text-2xl font-medium text-neutral-950 mb-4 justify-center text-center" >
-      Tableau de syntheses E4
-    </p >
-    <div class="border border-current p-2 rounded-lg" >
-      <a href="/assets/assets_index/Epreuve E4.pdf" target="_blank" >
-        <img alt="tableau de sythese" class="w-96 " src="/assets/assets_index/Epreuve E4.webp" >
-      </a >
-    </div >
+  <p id="EpreuveE4" class="ml-10 text-5xl font-medium mt-40 text-neutral-950" ><i class="fa-solid fa-code" ></i >Epreuve
+                                                                                                                 E4
+  </p >
+  <div class="font-['Roboto']" >
+    <E4/>
   </div >
   <p id="VeilleTechno" class="ml-10 text-5xl font-medium mt-40 text-neutral-950" ><i class="fa-solid fa-code" ></i >Veille
                                                                                                                     Technologique
